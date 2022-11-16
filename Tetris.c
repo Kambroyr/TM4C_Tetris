@@ -148,15 +148,23 @@ uint16_t rows[16];
 
 static int16_t y0 = -20, y1 = -20, y2 = -20, y3 = -20;
 static int16_t dx0 = 50, dx1 = 50, dx2 = 50, dx3 = 50;
-static uint32_t linesCleared = 0;
-static uint8_t language = 0;
-uint32_t shape;						//	Index of current shape
-static int8_t way = 0;					//	Index of current shape's orientation
-uint32_t ADCMail;					//	ADC mailbox
 
-void DisableInterrupts(void);				//	Disable interrupts
-void EnableInterrupts(void);				//	Enable interrupts
-void PortE_Init(void);					//	Initialize Port E to be used for edge-triggered interrupts
+// Used to keep track of score
+static uint32_t linesCleared = 0;
+
+static uint8_t language = 0;
+
+// Index of current shape
+uint32_t shape;						
+// Index of current shape's orientation
+static int8_t way = 0;					
+// ADC mailbox
+uint32_t ADCMail;					
+
+void DisableInterrupts(void);				
+void EnableInterrupts(void);				
+// Initialize Port E to be used for edge-triggered interrupts
+void PortE_Init(void);					
 void drawPiece(uint8_t i, uint8_t rot);
 void clearPiece(void);
 void clearRotPiece(void);
