@@ -23,12 +23,10 @@
 #include "ADC.h"
 #include "Images.h"
 #include "Sound.h"
-#include "Timer1.h"
 #include "Systick.h"
 #include "GPIOIntPortE.h"
 #include "Timer0.h"
 #include "Timer1.h"
-#include "Sound.h"
 
 #define drop 0
 #define clear 1
